@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/cs.function.json",
+  "title": "Function",
+  "description": "Function (code)",
+  "type": "object",
+  "properties": {
+    "definedIn": {
+      "type": "string",
+      "description": "该函数定义的库"
+    },
+    "signature": {
+      "type": "object",
+      "properties": {
+        "funcName": {
+          "type": "string",
+          "description": "函数名称"
+        },
+        "argList": {
+          "type": "array",
+          "description": "函数的参数列表",
+          "uniqueItems": true,
+          "items": {
+            "type": "object",
+            "properties": {
+              "argName": { "type": "string" },
+              "argType": { "type": "string" },
+              "argDesc": { "type": "string" }
+            },
+            "required": ["argName", "argType", "argDesc"],
+            "additionalProperties": false
+          }
+        },
+        "returnWithCode": {
+          "type": "array",
+          "description": "函数返回值的说明",
+          "items": {
+            "type": "object",
+            "properties": {
+              "returnValue": {"type": "string"},
+              "meaning": {"type": "string"}
+            },
+            "required": ["returnValue", "meaning"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["funcName", "argList", "returnWithCode"]
+    },
+    "explanation": {
+      "type": "string",
+      "description": "对该函数功能和用法的解释"
+    }
+  },
+  "required": ["definedIn", "signature", "explanation"]
+}

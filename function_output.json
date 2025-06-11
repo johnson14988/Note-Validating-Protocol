@@ -1,0 +1,47 @@
+{
+    "definedIn": "pthread.h",
+    "signature": {
+        "funcName": "pthread_create",
+        "argList": [
+            {
+                "argName": "tid",
+                "argType": "pthread_t *restrict",
+                "argDesc": "thread ID pointer to store thread ID"
+            },
+            {
+                "argName": "tattr",
+                "argType": "const pthread_attr_t *restrict",
+                "argDesc": "pointer to thread attribute structure"
+            },
+            {
+                "argName": "start_routine",
+                "argType": "void *(*)(void *)",
+                "argDesc": "function pointer to the code the thread will run"
+            },
+            {
+                "argName": "arg",
+                "argType": "void *restrict",
+                "argDesc": "argument to be passed to the start routine"
+            }
+        ],
+        "returnWithCode": [
+            {
+                "returnValue": "0",
+                "meaning": "thread created successfully"
+            },
+            {
+                "returnValue": "EAGAIN",
+                "meaning": "system limit on threads was reached"
+            },
+            {
+                "returnValue": "EINVAL",
+                "meaning": "invalid attribute settings in tattr"
+            },
+            {
+                "returnValue": "EPERM",
+                "meaning": "insufficient permission to set scheduling attributes"
+            }
+        ]
+    },
+    "explanation": "Create a new thread with specified attributes and start routine."
+}
