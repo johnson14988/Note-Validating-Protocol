@@ -37,5 +37,5 @@ def parse(txt_input):
     return data
 
 data = parse("function_demo.txt")
-with open(f"{data[funcName]}.json", "w", encoding="utf-8") as f:
+with open("function_output.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=4, ensure_ascii=False)
