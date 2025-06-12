@@ -3,7 +3,21 @@
 ![Version](https://img.shields.io/badge/version-v1.0.0-blue)
 ![](https://img.shields.io/badge/status-WIP-red)
 
+# Motive
+NVP is aiming to:
+- help collaborators share information more accurately using a mutually agreed-upon structure, and they can choose the content and amount to share with finer granularity, which can also help promote fairness.
+- benefits information collectors: A clearly defined target structure can prevent feature creep, ensuring that collectors do not excessively gather information deemed useless.
+
 # User's Guide
+## Schemas
+- [General Concept Schema](./JSON%20Schema/gnrl.concept.json)
+- [General Theory Schema](./JSON%20Schema/gnrl.theory.json)
+- [Math Formula Schema](./JSON%20Schema/math.formula.json)
+- [Math Proposition Schema](./JSON%20Schema/math.proposition.json)
+- [Math Proof Schema](./JSON%20Schema/math.proof.json)
+- [(cs) Code Schema](./JSON%20Schema/cs.code.json)
+- [(cs) Libary Function Schema](./JSON%20Schema/cs.libfunc.json)
+
 # Developer’s Guide
 ## Tasks
 Looking for new schemas  
