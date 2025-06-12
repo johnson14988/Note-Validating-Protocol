@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MathFormula",
+  "description": "用于表示数学公式及其变量说明",
+  "type": "object",
+  "properties": {
+    "desc": {
+      "type": "string",
+      "description": "对公式的简要说明"
+    },
+    "formula": {
+      "type": "string",
+      "description": "LaTeX 格式的数学公式表达"
+    },
+
+    "var": {
+      "type": "object",
+      "description": "变量说明，键是变量名，值是描述",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "tag": {
+      "type": "array",
+      "description": "与公式相关的分类标签",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["formula"],
+  "additionalProperties": false
+}

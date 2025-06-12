@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CodeSnippet",
+  "type": "object",
+  "properties": {
+    "desc": {
+      "type": "string",
+      "description": "代码段的简要描述"
+    },
+    "lang": {
+      "type": "string",
+      "enum": ["py", "c", "js", "ts", "cpp", "java", "sql", "bash", "psl"],
+      "description": "编程语言类型"
+    },
+    "code": {
+      "type": "string",
+      "description": "实际的代码内容"
+    },
+    "tag": {
+      "type": "array",
+      "description": "标签数组，用于分类或搜索",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["title", "lang", "code"],
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schema/proposition.schema.json",
+  "title": "MathProposition",
+  "description": "用于表示命题、定理、引理、公理等数学陈述",
+  "type": "object",
+  "properties": {
+    "desc": {
+      "type": "string",
+      "description": "对命题的介绍"
+    },
+    "statement": {
+      "type": "string",
+      "description": "命题内容，可以使用 LaTeX 或自然语言"
+    },
+    "propType": {
+      "type": "string",
+      "enum": ["theorem", "lemma", "corollary", "axiom", "conjecture", "definition"],
+      "description": "命题的类型"
+    },
+    "tag": {
+      "type": "array",
+      "description": "分类标签",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["title", "statement", "type"],
+  "additionalProperties": false
+}
