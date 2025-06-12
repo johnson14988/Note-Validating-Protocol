@@ -27,7 +27,6 @@ Validate JSON objects and store them
 ## Suggested Style for Schemas
 1. Contain generic fields:  
    - id -> unique identifier of the instance such as its unique name or a certain index  
-   - class -> classification of the instance described by the schema  
    - desc -> description of the instance itself  
    - tags -> an array containing all tags to the instance
 2. Avoid schema-specific nomenclature
