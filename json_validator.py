@@ -1,7 +1,7 @@
 import json
 from jsonschema import validate, ValidationError
 
-with open('JSON Schema/cs.function.json', 'r', encoding='utf-8') as f:
+with open('JSON Schema/cs.libfunc.json', 'r', encoding='utf-8') as f:
     schema = json.load(f)
 
 with open('function_output.json', 'r', encoding='utf-8') as f:
