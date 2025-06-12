@@ -6,6 +6,7 @@
   "properties": {
     "version": {"type": "string"},
     "author": {"type": "string"},
+    "createdOn": {"type": "string"},
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
     "tag": {
@@ -17,7 +18,11 @@
     "related": {
       "type": "object",
       "properties": {
-        "parent": {
+        "prerequisites": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "parents": {
           "type": "array",
           "items": {"type": "string"}
         },

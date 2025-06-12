@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MathFormula",
+  "description": "用于表示数学公式及其变量说明",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "desc": {
+      "type": "string"
+    }
+  }
+}

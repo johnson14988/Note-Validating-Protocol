@@ -5,6 +5,16 @@
   "description": "Function (code)",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string"
+    },
+    "tag": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "desc": {
+      "type": "string"
+    },
     "definedIn": {
       "type": "string",
       "description": "该函数定义的库"

@@ -3,22 +3,21 @@
   "title": "CodeSnippet",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "desc": {
-      "type": "string",
-      "description": "代码段的简要描述"
+      "type": "string"
     },
     "lang": {
       "type": "string",
-      "enum": ["py", "c", "js", "ts", "cpp", "java", "sql", "bash", "psl"],
-      "description": "编程语言类型"
+      "enum": ["py", "c", "js", "ts", "cpp", "java", "sql", "bash", "psl"]
     },
     "code": {
-      "type": "string",
-      "description": "实际的代码内容"
+      "type": "string"
     },
     "tag": {
       "type": "array",
-      "description": "标签数组，用于分类或搜索",
       "items": {
         "type": "string"
       }
