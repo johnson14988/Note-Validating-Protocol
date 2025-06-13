@@ -11,7 +11,7 @@
     "priority": {"type": "string"},
     "tag": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {"type": "string"}
     },
     "desc": {"type": "string"},
     "prerequisites": {

@@ -9,32 +9,20 @@
     "createdOn": {"type": "string"},
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
+    "priority": {"type": "string"},
     "tag": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {"type": "string"}
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
+    "prerequisites": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
     "related": {
-      "type": "object",
-      "properties": {
-        "prerequisites": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "parents": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "children": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "otherRelated": {
-          "type": "array",
-          "items": {"type": "string"}
-        }
-      }
+      "type": "array",
+      "items": {"type": "string"}
     }
   }
 }
