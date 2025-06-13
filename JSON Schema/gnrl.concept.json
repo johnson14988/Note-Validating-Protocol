@@ -1,18 +1,45 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "MathFormula",
-  "description": "用于表示数学公式及其变量说明",
+  "title": "General Concept Schema",
+  "description": "",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
+    "version": {"type": "string"},
+    "author": {"type": "string"},
+    "createdOn": {"type": "string"},
+    "accordingTo": {"type": "string"},
+    "id": {"type": "string"},
+    "priority": {"type": "string"},
     "tag": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {"type": "string"}
     },
-    "desc": {
-      "type": "string"
+    "desc": {"type": "string"},
+    "field": {"type": "string"},
+    "pre": {
+      "type": "array",
+      "description": "short for prerequisites",
+      "items": {"type": "string"}
+    },
+    "related": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "refs": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "parents": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "children": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "translation": {
+      "transLang": {"type": "string"},
+      "transText": {"type": "string"}
     }
   }
 }
