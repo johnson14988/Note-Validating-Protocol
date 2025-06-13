@@ -19,12 +19,16 @@ NVP is aiming to:
 - [(cs) Libary Function Schema](./JSON%20Schema/cs.libfunc.json)
 
 # Developer’s Guide
+
 ## Tasks
-Looking for new schemas  
-Enhance the existing schemas
-Define input text grammar
-Validate JSON objects and store them
+1. Looking for new schemas
+2. Enhance the existing schemas
+3. Define input text grammar
+4. Validate JSON objects and store them
+
 ## Suggested Style for Schemas
+(Jump to [sample-schema.json](./JSON%20Schema/sample-schema.json) to see an example)  
+
 1. Contain generic fields:  
    - id -> unique identifier of the instance such as its unique name or a certain index  
    - desc -> description of the instance itself  
