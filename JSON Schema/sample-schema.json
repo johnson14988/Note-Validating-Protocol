@@ -24,6 +24,10 @@
     "related": {
       "type": "array",
       "items": {"type": "string"}
+    },
+    "refs": {
+      "type": "array",
+      "items": {"type": "string"}
     }
   }
 }

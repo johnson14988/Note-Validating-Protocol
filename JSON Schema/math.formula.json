@@ -28,6 +28,10 @@
         "type": "string"
       }
     },
+    "refs": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
     "expression": {"type": "string"},
     "variables": {
       "type": "array",
