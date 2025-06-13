@@ -1,0 +1,65 @@
+{
+  $jsonSchema: {
+    title: 'Maths Proof Schema',
+    bsonType: 'object',
+    required: [
+      'propID'
+    ],
+    properties: {
+      _id: {
+        bsonType: 'objectId'
+      },
+      version: {
+        bsonType: 'string'
+      },
+      author: {
+        bsonType: 'string'
+      },
+      createdOn: {
+        bsonType: 'string'
+      },
+      accordingTo: {
+        bsonType: 'string'
+      },
+      priority: {
+        bsonType: 'string'
+      },
+      tags: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      desc: {
+        bsonType: 'string'
+      },
+      pre: {
+        bsonType: 'array',
+        description: 'short for prerequisites',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      related: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      refs: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      propID: {
+        bsonType: 'string'
+      }
+    },
+    additionalProperties: false
+  }
+}

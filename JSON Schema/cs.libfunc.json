@@ -56,7 +56,7 @@
           "returnValue": {"type": "string"},
           "returnMeaning": {"type": "string"}
         },
-        "required": ["returnCode"],
+        "required": ["returnValue"],
         "additionalProperties": false
       },
       "uniqueItems": true

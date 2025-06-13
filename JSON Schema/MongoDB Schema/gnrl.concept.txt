@@ -1,0 +1,106 @@
+{
+  $jsonSchema: {
+    title: 'General Concept Schema',
+    bsonType: 'object',
+    required: [
+      'concept',
+      'definition'
+    ],
+    properties: {
+      _id: {
+        bsonType: 'objectId'
+      },
+      version: {
+        bsonType: 'string'
+      },
+      author: {
+        bsonType: 'string'
+      },
+      createdOn: {
+        bsonType: 'string'
+      },
+      accordingTo: {
+        bsonType: 'string'
+      },
+      priority: {
+        bsonType: 'string'
+      },
+      tags: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      desc: {
+        bsonType: 'string'
+      },
+      field: {
+        bsonType: 'string'
+      },
+      pre: {
+        bsonType: 'array',
+        description: 'short for prerequisites',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      related: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      refs: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      parents: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      children: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      concept: {
+        bsonType: 'string'
+      },
+      definition: {
+        bsonType: 'string'
+      },
+      translations: {
+        bsonType: 'array',
+        uniqueItems: true,
+        items: {
+          bsonType: 'object',
+          required: [
+            'transLang',
+            'transText'
+          ],
+          properties: {
+            transLang: {
+              bsonType: 'string'
+            },
+            transText: {
+              bsonType: 'string'
+            }
+          },
+          additionalProperties: false
+        }
+      }
+    },
+    additionalProperties: false
+  }
+}

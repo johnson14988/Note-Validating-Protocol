@@ -1,0 +1,114 @@
+{
+  $jsonSchema: {
+    title: 'Library Function Schema',
+    bsonType: 'object',
+    required: [
+      'lib',
+      'funcName'
+    ],
+    properties: {
+      _id: {
+        bsonType: 'objectId'
+      },
+      version: {
+        bsonType: 'string'
+      },
+      author: {
+        bsonType: 'string'
+      },
+      createdOn: {
+        bsonType: 'string'
+      },
+      accordingTo: {
+        bsonType: 'string'
+      },
+      priority: {
+        bsonType: 'string'
+      },
+      tags: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      desc: {
+        bsonType: 'string'
+      },
+      field: {
+        bsonType: 'string'
+      },
+      pre: {
+        bsonType: 'array',
+        description: 'short for prerequisites',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      related: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      refs: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      lib: {
+        bsonType: 'string'
+      },
+      funcName: {
+        bsonType: 'string'
+      },
+      argList: {
+        bsonType: 'array',
+        uniqueItems: true,
+        items: {
+          bsonType: 'object',
+          required: [
+            'argName',
+            'argType'
+          ],
+          properties: {
+            argName: {
+              bsonType: 'string'
+            },
+            argType: {
+              bsonType: 'string'
+            },
+            argDesc: {
+              bsonType: 'string'
+            }
+          },
+          additionalProperties: false
+        }
+      },
+      result: {
+        bsonType: 'array',
+        uniqueItems: true,
+        items: {
+          bsonType: 'object',
+          required: [
+            'returnValue'
+          ],
+          properties: {
+            returnValue: {
+              bsonType: 'string'
+            },
+            returnMeaning: {
+              bsonType: 'string'
+            }
+          },
+          additionalProperties: false
+        }
+      }
+    },
+    additionalProperties: false
+  }
+}

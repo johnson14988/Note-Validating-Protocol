@@ -1,0 +1,92 @@
+{
+  $jsonSchema: {
+    title: 'Formula Schema',
+    bsonType: 'object',
+    required: [
+      'expression',
+      'variables'
+    ],
+    properties: {
+      _id: {
+        bsonType: 'objectId'
+      },
+      version: {
+        bsonType: 'string'
+      },
+      author: {
+        bsonType: 'string'
+      },
+      createdOn: {
+        bsonType: 'string'
+      },
+      accordingTo: {
+        bsonType: 'string'
+      },
+      priority: {
+        bsonType: 'string'
+      },
+      tags: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      desc: {
+        bsonType: 'string'
+      },
+      field: {
+        bsonType: 'string'
+      },
+      pre: {
+        bsonType: 'array',
+        description: 'short for prerequisites',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      related: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      refs: {
+        bsonType: 'array',
+        items: {
+          bsonType: 'string'
+        },
+        uniqueItems: true
+      },
+      expression: {
+        bsonType: 'string'
+      },
+      variables: {
+        bsonType: 'array',
+        uniqueItems: true,
+        items: {
+          bsonType: 'object',
+          required: [
+            'varName',
+            'varSymbol'
+          ],
+          properties: {
+            varName: {
+              bsonType: 'string'
+            },
+            varSymbol: {
+              bsonType: 'string'
+            },
+            varDesc: {
+              bsonType: 'string'
+            }
+          },
+          additionalProperties: false
+        }
+      }
+    },
+    additionalProperties: false
+  }
+}
