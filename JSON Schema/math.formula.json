@@ -1,36 +1,36 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "",
-  "description": "",
+  "title": "Formula Schema",
   "type": "object",
   "properties": {
     "version": {"type": "string"},
     "author": {"type": "string"},
     "createdOn": {"type": "string"},
-
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
     "priority": {"type": "string"},
-    "tag": {
+    "tags": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
     "pre": {
       "type": "array",
       "description": "short for prerequisites",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "related": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "refs": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "expression": {"type": "string"},
     "variables": {
@@ -41,8 +41,13 @@
           "varName": {"type": "string"},
           "varSymbol": {"type": "string"},
           "varDesc": {"type": "string"}
-        }
-      }
+        },
+        "required": ["varName", "varSymbol"],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
     }
-  }
+  },
+  "required": ["id", "expression", "variables"],
+  "additionalProperties": false
 }

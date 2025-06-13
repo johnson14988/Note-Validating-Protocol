@@ -1,66 +1,67 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/cs.function.json",
-  "title": "Function",
-  "description": "Function (code)",
+  "title": "Library Function Schema",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
-    "tag": {
+    "version": {"type": "string"},
+    "author": {"type": "string"},
+    "createdOn": {"type": "string"},
+    "accordingTo": {"type": "string"},
+    "id": {"type": "string"},
+    "priority": {"type": "string"},
+    "tags": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
-    "desc": {
-      "type": "string"
+    "desc": {"type": "string"},
+    "field": {"type": "string"},
+    "pre": {
+      "type": "array",
+      "description": "short for prerequisites",
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
-    "definedIn": {
-      "type": "string",
-      "description": "该函数定义的库"
+    "related": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
-    "signature": {
-      "type": "object",
-      "properties": {
-        "funcName": {
-          "type": "string",
-          "description": "函数名称"
+    "refs": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "lib": {"type": "string"},
+    "funcName": {"type": "string"},
+    "argList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "argName": { "type": "string" },
+          "argType": { "type": "string" },
+          "argDesc": { "type": "string" }
         },
-        "argList": {
-          "type": "array",
-          "description": "函数的参数列表",
-          "uniqueItems": true,
-          "items": {
-            "type": "object",
-            "properties": {
-              "argName": { "type": "string" },
-              "argType": { "type": "string" },
-              "argDesc": { "type": "string" }
-            },
-            "required": ["argName", "argType", "argDesc"],
-            "additionalProperties": false
-          }
-        },
-        "returnWithCode": {
-          "type": "array",
-          "description": "函数返回值的说明",
-          "items": {
-            "type": "object",
-            "properties": {
-              "returnValue": {"type": "string"},
-              "meaning": {"type": "string"}
-            },
-            "required": ["returnValue", "meaning"],
-            "additionalProperties": false
-          }
-        }
+        "required": ["argName", "argType"],
+        "additionalProperties": false
       },
-      "required": ["funcName", "argList", "returnWithCode"]
+      "uniqueItems": true
     },
-    "explanation": {
-      "type": "string",
-      "description": "对该函数功能和用法的解释"
+    "result": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "returnValue": {"type": "string"},
+          "returnMeaning": {"type": "string"}
+        },
+        "required": ["returnCode"],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
     }
   },
-  "required": ["definedIn", "signature", "explanation"]
+  "required": ["id", "lib", "funcName"],
+  "additionalProperties": false
 }

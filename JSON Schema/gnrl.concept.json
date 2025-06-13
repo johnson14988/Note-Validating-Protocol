@@ -10,36 +10,55 @@
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
     "priority": {"type": "string"},
-    "tag": {
+    "tags": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
     "pre": {
       "type": "array",
       "description": "short for prerequisites",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "related": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "refs": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "parents": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "children": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
-    "translation": {
-      "transLang": {"type": "string"},
-      "transText": {"type": "string"}
+    "concept": {"type": "string"},
+    "definition": {"type": "string"},
+    "translations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "transLang": {"type": "string"},
+          "transText": {"type": "string"}
+        },
+        "required": ["transLang", "transText"],
+        "additionalProperties": false
+      },
+      "uniqueItems": true
     }
-  }
+  },
+  "required": ["id", "concept", "definition"],
+  "additionalProperties": false
 }

@@ -1,7 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "",
-  "description": "",
+  "title": "Maths Proposition Schema",
   "type": "object",
   "properties": {
     "version": {"type": "string"},
@@ -10,30 +9,37 @@
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
     "priority": {"type": "string"},
-    "tag": {
+    "tags": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
     "pre": {
       "type": "array",
       "description": "short for prerequisites",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "related": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "refs": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "assumptions": {
       "type": "array",
-      "items": {"type": "string"}
+      "items": {"type": "string"},
+      "uniqueItems": true
     },
     "body": {"type": "string"},
     "proofID": {"type": "string"}
-  }
+  },
+  "required": ["id", "body"],
+  "additionalProperties": false
 }
