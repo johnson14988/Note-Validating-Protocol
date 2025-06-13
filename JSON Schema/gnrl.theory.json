@@ -6,28 +6,39 @@
   "properties": {
     "version": {"type": "string"},
     "author": {"type": "string"},
+    "createdOn": {"type": "string"},
     "accordingTo": {"type": "string"},
     "id": {"type": "string"},
+    "priority": {"type": "string"},
     "tag": {
       "type": "array",
-      "items": { "type": "string" }
+      "items": {"type": "string"}
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
+    "pre": {
+      "type": "array",
+      "description": "short for prerequisites",
+      "items": {"type": "string"}
+    },
     "related": {
-      "type": "object",
-      "properties": {
-        "parent": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "children": {
-          "type": "array",
-          "items": {"type": "string"}
-        },
-        "otherRelated": {
-          "type": "array",
-          "items": {"type": "string"}
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "refs": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "motive": {"type": "string"},
+    "goal": {"type": "string"},
+    "statement": {"type": "string"},
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "appField": {"type": "string"},
+          "appSummary": {"type": "string"}
         }
       }
     }
