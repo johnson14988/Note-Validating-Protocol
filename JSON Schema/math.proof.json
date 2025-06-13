@@ -1,18 +1,27 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "MathFormula",
-  "description": "用于表示数学公式及其变量说明",
+  "title": "Maths Proof",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
+    "version": {"type": "string"},
+    "author": {"type": "string"},
+    "createdOn": {"type": "string"},
+    "accordingTo": {"type": "string"},
+    "id": {"type": "string"},
+    "priority": {"type": "string"},
     "tag": {
       "type": "array",
       "items": { "type": "string" }
     },
-    "desc": {
-      "type": "string"
-    }
+    "desc": {"type": "string"},
+    "prerequisites": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "related": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "propID": {"type": "string"}
   }
 }

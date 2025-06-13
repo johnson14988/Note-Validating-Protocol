@@ -1,31 +1,43 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "MathFormula",
-  "description": "用于表示数学公式及其变量说明",
+  "title": "",
+  "description": "",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
+    "version": {"type": "string"},
+    "author": {"type": "string"},
+    "createdOn": {"type": "string"},
+
+    "accordingTo": {"type": "string"},
+    "id": {"type": "string"},
+    "priority": {"type": "string"},
     "tag": {
       "type": "array",
       "items": { "type": "string" }
     },
-    "desc": {
-      "type": "string"
+    "desc": {"type": "string"},
+    "field": {"type": "string"},
+    "prerequisites": {
+      "type": "array",
+      "items": {"type": "string"}
     },
-    "formula": {
-      "type": "string",
-      "description": "LaTeX 格式的数学公式表达"
-    },
-    "var": {
-      "type": "object",
-      "description": "变量说明，键是变量名，值是描述",
-      "additionalProperties": {
+    "related": {
+      "type": "array",
+      "items": {
         "type": "string"
       }
+    },
+    "expression": {"type": "string"},
+    "variables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "varName": {"type": "string"},
+          "varSymbol": {"type": "string"},
+          "varDesc": {"type": "string"}
+        }
+      }
     }
-  },
-  "required": ["formula"],
-  "additionalProperties": false
+  }
 }
