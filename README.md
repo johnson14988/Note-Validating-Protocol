@@ -18,6 +18,9 @@ NVP is aiming to:
 - [(cs) Code Schema](./JSON%20Schema/cs.code.json)
 - [(cs) Libary Function Schema](./JSON%20Schema/cs.libfunc.json)
 
+## Validation using MongoDB schema
+MongoDB schema uses a slightly different schema definition. And corresponding MongoDB schema of each standard JSON Schema can be found in [MongoDB Schema Folder](./JSON%20Schema/MongoDB%20Schema/)
+
 # Developer’s Guide
 
 ## Tasks
