@@ -17,8 +17,9 @@
     },
     "desc": {"type": "string"},
     "field": {"type": "string"},
-    "prerequisites": {
+    "pre": {
       "type": "array",
+      "description": "short for prerequisites",
       "items": {"type": "string"}
     },
     "related": {
